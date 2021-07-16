@@ -1,0 +1,162 @@
+<!--THIS CODE MADE By:
+	TEUKU RIFKI DHULUL FATA
+	201731317
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Teuku Rifki Dhulul Fata</title>
+	
+  <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+  <script src="bootstrap/jquery.min.js"></script>
+  <script src="bootstrap/popper.min.js"></script>
+  <script src="bootstrap/bootstrap.min.js"></script>
+
+</head>
+<body>
+		<!--NAVBAR-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+       <li class="nav-item active">
+        <a class="nav-link" href="how.html">How to Use<span class="sr-only">(current)</span></a>
+      </li>
+       <li class="nav-item active">
+        <a class="nav-link" href="about.html">About<span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!--NAVBAR-->
+<!--Jumbotron-->
+<div class="jumbotron jumbotron-fluid" id="jumbo" style="background: rgb(2,0,36);background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,9,1) 42%, rgba(255,0,0,1) 100%);">
+  <div class="container">
+    <h1 style="color:#ffffff" class="display-4">Cek Provider SIM CARD</h1>
+    <h5 style="color:#bebebe" class="lead">Website ini berguna untuk mengecek provider dari SIM CARD Anda</h5>
+    <h5 style="color:#a0a0a0" class="lead">Dibuat oleh : Teuku Rifki Dhulul Fata 201731317</h5>
+  </div>
+</div>
+<!--jumbotron-->
+<!--FORM-->
+<center>
+<form>
+  <div class="form-group" align="center" style="width: 500px">
+    <label style="margin-bottom: 25px" for="exampleInputEmail1">Masukkan Nomor HP</label>
+    <div class="input-group">
+    <input type="text" class="form-control" id="Nope" for="Nope" aria-describedby="emailHelp" placeholder="085277494909" style="text-align: center">
+    <div class="pull-right" style="margin-left: 5px">
+    <button type="button" value="simpan" name="simpan" class="btn btn-primary" onclick="fungsi()">Cari</button>
+    </div>
+    </div>
+    <small id="emailHelp" class="form-text text-muted">We'll never share your phone number with anyone else.</small>
+    <h3 style="margin-top: 25px" id="provider">TELKOMSEL AS</h3>
+  </div>
+</form>
+</center>
+<script>
+            function fungsi() {
+
+				//document.getElementById("provider").innerHTML = "New text!";
+
+                var nomorHP = document.getElementById("Nope").value;
+				var strFirstFour = nomorHP.substring(0,4);
+				var provider = document.getElementById("provider");
+
+                if (strFirstFour == "0811"){
+                    provider.innerHTML = "TELKOMSEL HALO";
+                }
+                else if (strFirstFour == "0812" || strFirstFour == "0813" || strFirstFour == "0821" ) {
+                provider.innerHTML = "TELKOMSEL SIMPATI";	
+                }
+                else if (strFirstFour == "0822" || strFirstFour == "0852" || strFirstFour == "0853" || strFirstFour == "0823") {
+                provider.innerHTML = "TELKOMSEL AS";	
+                } 
+                else if (strFirstFour == "0851" ) {
+                provider.innerHTML = "TELKOMSEL AS ATAU BY.U";	
+                } 
+                else if (strFirstFour == "0814") {
+                provider.innerHTML = "INDOSAT M2 BROADBAND";	
+                } 
+                else if (strFirstFour == "0815" || strFirstFour == "0816") {
+                provider.innerHTML = "MATRIX DAN MENTARI";	
+                } 
+                else if (strFirstFour == "0855") {
+                provider.innerHTML = "INDOSAT MATRIX";	
+                } 
+                else if (strFirstFour == "0858") {
+                provider.innerHTML = "INDOSAT MENTARI";	
+                } 
+                else if (strFirstFour == "0856" || strFirstFour == "0857") {
+                provider.innerHTML = "INDOSAT IM3";	
+                } 
+                else if (strFirstFour == "0817" || strFirstFour == "0818" || strFirstFour == "0819" || strFirstFour == "0859" || strFirstFour == "0877" || strFirstFour == "0878" ) {
+                provider.innerHTML = "XL";	
+                }
+
+                else if (strFirstFour == "0838" || strFirstFour == "0831" || strFirstFour == "0832" || strFirstFour == "0833") {
+                provider.innerHTML = "AXIS";	
+                }
+                else if (strFirstFour == "0895" || strFirstFour == "0896" || strFirstFour == "0897" || strFirstFour == "0898" || strFirstFour == "0899") {
+                provider.innerHTML = "TRI 3";
+                }
+
+                else if (strFirstFour == "0881" || strFirstFour == "0882" || strFirstFour == "0883" || strFirstFour == "0884" || strFirstFour == "0885" || strFirstFour == "0886" || strFirstFour == "0887" || strFirstFour == "0888" || strFirstFour == "0889") {
+                provider.innerHTML = "SMARTFREN";	
+                }
+
+                else if (strFirstFour == "0828") {
+                provider.innerHTML = "CERIA";	
+                }
+
+                else 
+                {
+                    provider.innerHTML = "Nomor yang Anda Masukkan Tidak Terdata";
+                }
+            }
+
+        </script>
+<!-- 
+	<div class="content">
+		<header>
+			<h1 class="judul">TEUKU RIFKI </h1>
+			<h3 Class="deskripsi">Membuat halaman web dinamis dengan PHP</h3>
+		</header>
+		<div class="menu">
+			<ul>
+				<li><a href="index.php?page=home">HOME</a></li>
+				<li><a href="index.php?page=tentang">TENTANG</a></li>
+				<li><a href="index.php?page=tutorial">TUTORIAL</a></li>
+			</ul>
+		</div>
+		<div class="badan">
+			<?php
+				if(isset($_GET['page'])){
+					$page = $_GET['page'];
+
+					switch ($page) {
+						case 'home':
+							include "halaman/home.php";
+							break;
+						case 'tentang':
+							include "halaman/tentang.php";
+							break;
+						case 'tutorial':
+							include "halaman/tutorial.php";
+							break;
+						default:
+							echo "<center><h3>Maaf. Halaman tidak ditemukan !</h3></center>";
+							break;
+					}
+				}
+				else{
+					include "halaman/home.php";
+				}
+			?>
+		</div>
+	</div>
+	-->
+</body>
+</html>
